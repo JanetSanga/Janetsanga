@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: red;" style="position: relative;">LAIKIPIA COUNTY</title>
+    <link rel="stylesheet" href="tharaka.css" type="tharaka/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <script
+  src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+<script src="polygon.geojson"></script>
+
+
+<script src="tharaka.js"></script>
+<body style="background-image: url(back3.jpg);">
+</head>
+<h1 style="color: red">LAIKIPIA COUNTY WEB MAP</h1>
+
+<nav><h1>
+    <ul><a href="#home">HOME</a></ul>
+    <ul><a href="#about">ABOUT</a> </ul>
+    <ul></li><a href="#map">MAP</a></ul>
+    <ul><a href="#services">SERVICES</a></ul>
+         <ul><a href="#contacts">CONTACT US</a></ul></h1>
+
+</nav>
+
+
+<div id="home">
+    <h2 style="color: goldenrod;">HOME</h2>
+
+    <p style="color: antiquewhite;">Laikipia County is one of the 47 counties in Kenya.
+     It is located on the Equator in the former Riftvalley and is widely known 
+     for tourism <br> and ranching. The county name means treeless plain and is a description 
+     of the county which is a vast plain with wildlife and domestic animals roaming on its rangelands.</p><hr> 
+</div> 
+<div id="about">
+      <h2 style="color: goldenrod;">ABOUT</h2>
+<p style="color: antiquewhite;">It's main economic activities are crop farming, livestock rearing and tourism.
+      The County has an area of 9,462 km2 and has a population of 518,560.</p></div>
+
+ 
+ <div><h2 style="color:goldenrod;">MAP</h2></div>
+
+      
+<div id="map" style="height: 450px;">
+  
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="tharaka.js"></script></div>
+   
+   
+    <div style="color: aliceblue;">
+        <form id="marker-form">
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" required>
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" required>
+            <label for="marker-name">Name:</label>
+            <input type="text" id="marker-name" required>
+            <label for="marker-description">Description:</label>
+            <input type="text" id="marker-description" required>
+            <button type="submit">Add Marker</button>
+        </form>
+        </div>
+        
+        <nav>
+            <table cellspacing="5" cellpadding="5">
+                <tr>
+                    <form onsubmit="searchLocation(); return false;">
+                        <div class="question" style="color: #ffffff;">
+                            <label for="search">Search:</label>
+                        </div>
+                        <input type="text" id="locationInput" name="search" placeholder="Enter Location">
+                        <input type="submit" value="Submit">
+                    </form>
+                </tr>
+            </table>
+        </nav>
+        
+        <div class="main-content">
+            <div class="side-pane">
+                <div class="main" style="text-decoration: underline;">
+                    
+                </div>
+                <div style="font-size: 11px;">
+                    <p>
+                    <div id="mapid"></div>
+                    <p><button onclick="enableAnalysisFunctionality()">Draw Features</button></p>
+                    <p></p>
+                    <h3 style="color: aliceblue;">Map zoomed to Laikipia County.</h3>
+                    <h3 style="color: aliceblue;">If you search a given location on the search bar, the map automatically zooms to the place of
+                        interest.</h3>
+                    </p>
+                </div>
+
+    <div id="services"><h2 style="color: goldenrod;">SERVICES</h2>
+    <p style="color: aliceblue;"><pre style="color: beige;">Karibuni sana Laikipia!
+         We believe in Diversity & Abundance.
+    We transform the livelihood of the people of Laikipia county on a foundation of integrity
+     through accountable, efficient and effective leadership that invokes participation and pursuit 
+     of quality services, for a prosperous county that is a harbor of excellence</pre></p></div>
+
+     <div id="contacts"><h2 style="color: goldenrod;">CONTACT US</h2>
+        <p style="color: beige;"><i>0740031031<br>
+            Email: info@laikipia.go.ke<br>
+            
+            PHYSICAL ADDRESS<br>
+            P. O. BOX 131, 20321 - Rumuruti
+            </p></i>
+     
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Laikipia Web Map</title>
+    <!-- Include your CSS file -->
+    <link rel="stylesheet" type="laikipia/css" href="laikipia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="media_icons" style="font-size: xx-large;">
+        <a href="https://www.facebook.com/profile.php?id=100057162142444&mibextid=ZbWKwL">
+           <i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/LaikipiaCountyG/t=10T3ERxNrrlUmz8LDetcEQ&s=09">
+           <i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/laikipiagovt?igsh=ZzNjZWZzOWRrNXAw">
+            <i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@laikipia031/si=BGcGZUtlReFi3Q7x">
+            <i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+s
+  </div>
+    <!-- Your website content goes here -->
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container" style="color: aliceblue;">
+            <p>&copy; 2024 LaikipiaWebMap. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

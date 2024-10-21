@@ -1,0 +1,26 @@
+*
+.header{
+    display: inline-flex;
+    text-align: center;
+    
+}
+
+/* Reset some default styles and set the background color for the footer */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the footer container */
+footer {
+    background-color: aqua; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    padding: 20px 0; /* Adjust the padding as needed */
+}
+
+
+/* Center the text within the footer container */
+.container {
+    text-align: center;
+}
